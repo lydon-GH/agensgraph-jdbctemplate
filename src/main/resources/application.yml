@@ -1,0 +1,26 @@
+server:
+  port: 2222
+  context-path: /
+swagger2:
+  enable: true
+spring:
+  datasource:
+    initialize: false
+agens:
+  product:
+    name: agensgraph-jdbctemplate
+    version: 1.0
+    hello_msg: AgensBrowser web v1.0 (since 2018-02-01)
+  config:
+    base_path: /api
+    query_timeout: 600000   # 1000 ms = 1 sec
+  outer:
+    datasource:
+      driverClassName: net.bitnine.agensgraph.Driver
+      url: jdbc:agensgraph://127.0.0.1:5432/agens
+      graph_path: test
+      username: agens
+      password: agens
+      max_rows: 1000
+
+
