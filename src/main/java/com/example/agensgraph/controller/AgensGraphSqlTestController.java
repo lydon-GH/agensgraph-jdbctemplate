@@ -81,6 +81,13 @@ public class AgensGraphSqlTestController {
         return resultVO;
     }
 
+
+    @RequestMapping(value="/testSentinel",method= RequestMethod.GET)
+    @ResponseBody
+    public	String  testSentinel() {
+        return "succes";
+    }
+
 }
 
 

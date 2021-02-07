@@ -4,8 +4,15 @@ server:
 swagger2:
   enable: true
 spring:
+  application:
+    name: agensgraph
   datasource:
     initialize: false
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+      eager: true
 agens:
   product:
     name: agensgraph-jdbctemplate
